@@ -1,0 +1,39 @@
+.main-portfolio {
+    padding-bottom: 94px;
+  }
+  
+  .main-portfolio__items {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .main-portfolio__item img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .main-portfolio__names{
+  text-align: center;
+  
+  font-weight: 700;
+  font-size: 14px;
+  line-height: calc(16/14);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  }
+  
+  .main-portfolio__item{
+    position: relative;
+  }
+  
+  .main-portfolio__name{
+    width: 370px;
+    height: 70px;
+    position: absolute;
+    background: rgba(47, 48, 58, 0.8);
+    padding: 27px 0px;
+    bottom: 0;
+    justify-content: center;
+  }
