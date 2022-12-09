@@ -1,18 +1,19 @@
-.portfolio {
+.menu{
     padding: 94px 0;
   }
   
-  .portfolio__items {
+  .menu__list {
     display: flex;
     justify-content: center;
     margin-right: auto;
     margin-bottom: 50px;
   }
   
-  .portfolio__item:not(:last-child) {
+  .menu__item:not(:last-child) {
     padding-right: 8px;
   }
-  .exsamples__items {
+  
+  .exsamples__list {
     display: flex;
     flex-wrap: wrap;
   }

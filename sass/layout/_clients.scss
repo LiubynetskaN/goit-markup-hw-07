@@ -3,7 +3,7 @@
     margin: 0 auto;
   }
   
-  .clients__items{
+  .clients__list{
     display: flex;
     justify-content:space-between;
   }
@@ -15,11 +15,13 @@
     margin-right: 30px;
     border-radius: 4px;
     content: "";
+    
+    &:last-child{
+      margin-right: 0;
+    }
   }
   
-  .client__item:last-child{
-    margin-right: 0;
-  }
+  
   
   .client__link{
     width: 100%;
