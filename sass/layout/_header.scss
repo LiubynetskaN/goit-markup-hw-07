@@ -34,25 +34,7 @@
     color: var(--black-color);
   }
 
-   .header-nav {
-    margin-right: auto;
-  }
-  .header__current {
-    color: var(--hover-color);
-  }
   
-  .header-nav__item{
-    position: relative;
-
-    &:not(:last-child) {
-      margin-right: 50px;
-    }
-    
-  }
-  .header-nav__list {
-    display: flex;
-  }
-
   .header-nav__link {
     display: block;
     padding: 32px 0;
@@ -68,7 +50,14 @@
   }
 }
 
-  .header__current::after {
+   .header-nav {
+    margin-right: auto;
+  }
+  .header__current {
+    color: var(--hover-color);
+
+    
+  &::after {
     content: '';
     position: absolute;
     width: 100%;
@@ -78,15 +67,32 @@
     bottom:0;
     left:0;
   }
+  }
+  
+  .header-nav__item{
+    position: relative;
+
+    &:not(:last-child) {
+      margin-right: 50px;
+    }
+    
+  }
+  .header-nav__list {
+    display: flex;
+  }
+
   
   .header-list {
     display: flex;
     align-items: center;
   }
 
-  .header-list__contact:not(:last-child) {
+  .header-list__contact {
+
+    &:not(:last-child){
     margin-right: 50px;
   }
+}
 
   .header-list__mail,
   .header-list__tel {
@@ -101,19 +107,15 @@
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   
   
-  &:hover,
-  &:focus,
-  .header-list__icon--email:hover,
-  .header-list__icon--email:focus {
+  &:hover + .header-list__icon--email:hover,
+  &:focus + .header-list__icon--email:focus   {
     color: var(--hover-color);
     fill: var(--hover-color);
   }
 
   
-  &:hover,
-  &:focus,
-  .header-contacts__icon--smartphone:hover,
-  .header-contacts__icon--smartphone:focus {
+  &:hover + .header-contacts__icon--smartphone:hover,
+  &:focus + .header-contacts__icon--smartphone:focus {
     color: var(--hover-color);
     fill: var(--hover-color);
   }

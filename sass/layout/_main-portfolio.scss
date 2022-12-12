@@ -21,12 +21,17 @@
   line-height: calc(16/14);
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  color: #FFFFFF;
+  color: var(--white-color) ;
   }
   
   .main-portfolio__item{
     position: relative;
+
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
   }
+  
   
   .main-portfolio__name{
     width: 370px;

@@ -17,11 +17,11 @@
     color: var(--second-color);
   }
   
-.benefits__item:not(:last-child),
-.main-portfolio__item:not(:last-child) {
-    margin-right: 30px;
+  .benefits__item{ 
+ &:not(:last-child){
+  margin-right: 30px;}
   }
-  
+ 
   .benefits__icons{
     display: flex;
     margin-bottom: 30px;
