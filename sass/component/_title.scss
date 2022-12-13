@@ -3,7 +3,7 @@
   
     font-weight: 900;
     font-size: 44px;
-    line-height: calc(60px / 44px);
+    line-height: calc(60 / 44);
     letter-spacing: 0.06em;
     text-transform: uppercase;
     color: var(--white-color);
@@ -57,7 +57,7 @@
     margin-bottom: 50px;
     font-weight: 700;
     font-size: 36px;
-    line-height: calc(42/36);
+    line-height: calc(42 / 36);
     text-align: center;
     letter-spacing: 0.03em;
     color: var(--black-color);
@@ -90,7 +90,7 @@
   
     font-weight: 700;
     font-size: 20px;
-    line-height: calc(23/20);
+    line-height: calc(23 / 20);
     letter-spacing: 0.03em;
     color: var(--black-color);
   }
