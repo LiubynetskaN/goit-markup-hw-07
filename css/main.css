@@ -692,10 +692,14 @@ ul {
             flex-grow: 1;
   }
 }
-
-.header__logo {
-  outline: 1px solid red;
+@media screen and (min-width: 1200px) {
+  .header-nav {
+    -webkit-box-flex: 0;
+        -ms-flex-positive: 0;
+            flex-grow: 0;
+  }
 }
+
 @media screen and (min-width: 1200px) {
   .header__logo {
     margin-right: 93px;
@@ -732,16 +736,15 @@ ul {
   display: block;
   color: var(--main-color);
 }
+.header-nav__link:hover, .header-nav__link:focus {
+  color: var(--hover-color);
+}
 @media screen and (min-width: 768px) {
   .header-nav__link {
     padding: 32px 0;
     font-size: 14px;
-    font-weight: 500;
     line-height: 1.1428571429;
     letter-spacing: 0.02em;
-  }
-  .header-nav__link:hover, .header-nav__link:focus {
-    color: var(--hover-color);
   }
 }
 
@@ -756,8 +759,14 @@ ul {
     margin: -25px;
   }
 }
+@media screen and (min-width: 768px) {
+  .header-nav__list {
+    margin: -26px;
+  }
+}
 
 .header-nav__item {
+  cursor: pointer;
   height: calc((100% - 192px) / 3);
   margin: 32px;
 }
@@ -766,6 +775,14 @@ ul {
     position: relative;
     width: calc((100% - 150px) / 3);
     margin: 25px;
+    text-align: center;
+    width: 100%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .header-nav__item {
+    width: calc((100% - 156px) / 3);
+    margin: 26px;
     text-align: center;
     width: 100%;
   }
@@ -803,10 +820,10 @@ ul {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  line-height: 1.1428571429;
+  font-size: 24px;
+  line-height: 1.1666666667;
   letter-spacing: 0.02em;
   color: var(--second-color);
-  fill: var(--second-color);
   -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -816,12 +833,18 @@ ul {
 }
 @media screen and (min-width: 768px) {
   .header-list__mail {
+    fill: var(--second-color);
     margin-bottom: 10px;
+    font-size: 12px;
+    line-height: 1.1666666667;
   }
 }
 @media screen and (min-width: 1200px) {
   .header-list__mail {
     margin-bottom: 0;
+    margin-right: 40px;
+    font-size: 14px;
+    line-height: 1.1428571429;
   }
 }
 
@@ -833,16 +856,31 @@ ul {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  line-height: 1.1428571429;
+  font-size: 34px;
+  line-height: 1.1764705882;
   letter-spacing: 0.02em;
-  color: var(--second-color);
-  fill: var(--second-color);
+  color: var(--hover-color);
   -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .header-list__tel:hover + .header-contacts__icon--smartphone:hover, .header-list__tel:focus + .header-contacts__icon--smartphone:focus {
   color: var(--hover-color);
   fill: var(--hover-color);
+}
+@media screen and (min-width: 768px) {
+  .header-list__tel {
+    color: var(--second-color);
+    fill: var(--second-color);
+    font-size: 12px;
+    line-height: 1.1666666667;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .header-list__tel {
+    margin-bottom: 0;
+    font-size: 14px;
+    line-height: 1.1428571429;
+  }
 }
 
 .contact-icon {
@@ -858,6 +896,7 @@ ul {
 }
 @media screen and (max-width: 767px) {
   .mobile-menu__container {
+    height: 796px;
     display: none;
     position: absolute;
     top: 0;
@@ -883,23 +922,14 @@ ul {
   }
 }
 
-.navigation,
-.contacts {
-  height: 100%;
-  width: 100%;
-}
-
 .navigation {
   text-align: left;
-  margin-bottom: 306px;
-  outline: 1px solid red;
+  margin-bottom: 309px;
 }
 @media screen and (min-width: 768px) {
   .navigation {
     margin-bottom: 0px;
     margin-right: 99px;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -907,14 +937,20 @@ ul {
 }
 @media screen and (min-width: 1200px) {
   .navigation {
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    margin-right: 290px;
   }
 }
 
-.contacts {
-  outline: 1px solid teal;
+@media screen and (min-width: 768px) {
+  .contacts {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
 }
 @media screen and (min-width: 1200px) {
   .contacts {
