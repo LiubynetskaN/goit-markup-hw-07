@@ -1,6 +1,55 @@
+.header__button--mobmenu{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  outline: 1px solid red;
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  margin:0;
+  z-index: 4;
+  
+  
+  fill: var(--main-color);
+
+  @media screen and (min-width:768px){
+    display: none;
+    }
+}
+
+.header__button--mobmenu:hover,
+.header-nav__icon--open:focus {
+  fill: var(--hover-button);
+}
+.header-nav__icon--close{
+  display: none;
+}
+
+.header__button--mobmenu.is-open .header-nav__icon--close {
+  display: inline-block;
+  fill: var(--main-color);}
+
+  .header-nav__icon--close:hover,
+  .header-nav__icon--close:focus {
+  fill: var(--hover-button);
+}
+
+
+.header__button--mobmenu.is-open .header-nav__icon--open {
+  display: none;
+}
+
+
+
+
 .hero__button {
     display: inline-block;
-    min-width: 216px;
+    min-width: 200px;
     text-align: center;
     border-radius: 4px;
     border: 1px solid transparent;
@@ -11,12 +60,16 @@
   
     font-weight: 700;
     font-size: 16px;
-    line-height: calc(30/16);
+    line-height: calc(30 / 16);
     letter-spacing: 0.06em;
     color: var(--white-color);
     font-family: inherit;
     cursor: pointer;
  
+@media screen and (min-width:1200px){
+  min-width: 216px;
+}
+
 &:hover,
 &:focus {
   background-color: var(--hover-button);
@@ -24,7 +77,6 @@
 }
 
 .subscribe__button {
-    display: flex;
     min-width: 200px;
     text-align: center;
     justify-content: center;
@@ -47,6 +99,9 @@
       &:focus {
         background-color: var(--hover-button);
       }
+      @media screen and (min-width:1200px){
+        display: flex;
+}
 }
 
 .menu__button {

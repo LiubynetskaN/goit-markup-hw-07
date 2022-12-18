@@ -21,14 +21,31 @@
   <body class="body">
     <!--Головний блок-->
     <header class="header">
-      <div class="container header__container">
-        <a href="/" class="header__logo logo link" lang="en"
+        <nav class="header-nav">
+          <a href="/" class="header__logo logo link" lang="en"
           ><span class="header__accent--blue">Web</span
           ><span class="header__accent--black">Studio</span></a
         >
 
-        <nav class="header-nav">
-          <ul class="header-nav__list items">
+        
+          
+          <!-- mobile menu -->
+          
+          <button 
+          type="button" 
+          class="header__button--mobmenu is-open" 
+          aria-expanded="false"
+          aria-controls="menu__container" 
+          data-menu-button>
+            <svg width="24" height="16" aria-label="Переключатель мобільного меню">
+              <use class="header-nav__icon--open" href="./images/header/symbol-mob_menu.svg#icon-close_mob_menu"></use>
+              <use class="header-nav__icon--close" href="./images/header/symbol-mob_menu.svg#icon-mob_menu"></use>
+              </svg>
+          </button>
+          <div class="mobile-menu__container" id="menu__container" data-menu>
+         
+        <div class="navigation">
+           <ul class="header-nav__list items">
             <li class="header-nav__item item">
               <a class="header-nav__link link header__current" href="./index.html"
                 >Студія</a
@@ -44,8 +61,10 @@
               <a class="header-nav__link link" href="#">Контракти</a>
             </li>
           </ul>
-        </nav>
+        </div>
+        
 
+        <div class="contacts">
         <ul class="header-list items">
           <li class="header-list__contact">
             <a class="header-list__mail link" href="mailto:ingo@devstudio.com"
@@ -63,7 +82,9 @@
           </li>
         </ul>
       </div>
-    </header>
+      </div>
+    </nav>
+  </header>
 
     <main class="studio-main">
       <section class="hero">
@@ -80,7 +101,7 @@
 
       <section class="benefits">
         <div class="container">
-          <h2 class="benefits__title visually-hidden">Особливості</h2>
+          <h2 class="benefits__title--hidden visually-hidden">Особливості</h2>
           <ul class="benefits__list items">
             <li class="benefits__item item benefits__icon--antenna">
               <div class="benefits__icons">
@@ -88,11 +109,9 @@
                   <use href="./images/icons.svg#icon-antenna"></use>
                 </svg>
               </div>
-              <h2 class="benefits__title">УВАГА ДО ДЕТАЛЕЙ</h2>
+              <h2 class="benefits__subtitle">УВАГА ДО ДЕТАЛЕЙ</h2>
               <p class="benefits__desc">
-                Ідейні міркування, і навіть початок <br />
-                повсякденної роботи з формування <br />
-                позиції.
+                Ідейні міркування, і навіть початок повсякденної роботи з формування позиції.
               </p>
             </li>
             <li class="benefits__item item benefits__icon--clock">
@@ -101,10 +120,9 @@
                   <use href="./images/icons.svg#icon-clock"></use>
                 </svg>
               </div>
-              <h2 class="benefits__title">ПУНКТУАЛЬНІСТЬ</h2>
+              <h2 class="benefits__subtitle">ПУНКТУАЛЬНІСТЬ</h2>
               <p class="benefits__desc">
-                Завдання організації, особливо рамки <br />
-                і місце навчання кадрів тягне у себе.
+                Завдання організації, особливо рамки і місце навчання кадрів тягне у себе.
               </p>
             </li>
             <li class="benefits__item item benefits__icon--diagram">
@@ -113,10 +131,9 @@
                   <use href="./images/icons.svg#icon-diagram"></use>
                 </svg>
               </div>
-              <h2 class="benefits__title">ПЛАНУВАННЯ</h2>
+              <h2 class="benefits__subtitle">ПЛАНУВАННЯ</h2>
               <p class="benefits__desc">
-                Так само консультація з широким <br />
-                активом значною мірою зумовлює.
+                Так само консультація з широким активом значною мірою зумовлює.
               </p>
             </li>
             <li class="benefits__item item benefits__icon--astronaut">
@@ -129,10 +146,9 @@
                   <use href="./images/icons.svg#icon-astronaut"></use>
                 </svg>
               </div>
-              <h2 class="benefits__title">СУЧАСНІ ТЕХНОЛОГІЇ</h2>
+              <h2 class="benefits__subtitle">СУЧАСНІ ТЕХНОЛОГІЇ</h2>
               <p class="benefits__desc">
-                Значимість цих проблем настільки <br />
-                очевидна, що реалізація планових <br />
+                Значимість цих проблем настільки очевидна, що реалізація планових
                 завдань.
               </p>
             </li>
@@ -182,7 +198,7 @@
       </section>
 
       <!--Третя сторінка-->
-      <section class="team">
+  <section class="team">
         <div class="container">
           <h2 class="team__title">Наша команда</h2>
           <ul class="team__list items">
@@ -484,7 +500,7 @@
     </footer>
 
     <!-- модальне вікно -->
-    <div class="modal-backdrop is-hidden" data-modal>
+  <div class="modal-backdrop is-hidden" data-modal>
       <div class="modal">
         <div class="modal__close--sign" data-modal-close>
           <svg class="modal__icon" width="11" height="11">
@@ -493,7 +509,7 @@
         </div>
           <div class="modal-form">
          <form class="js-speaker-form" autocomplete="off">
-          <h3 class="form__subtitle">Залиште свої дані, ми вам передзвонимо</h3>
+          <h3 class="form__title">Залиште свої дані, ми вам передзвонимо</h3>
          
           <div role="form-group" class="form__field">
           <label for="user-name" class="form__label">Ім'я</label>
@@ -550,9 +566,10 @@
     </div>
     <script src="./js/modal.js"></script>
 
+
+
     <!-- Форма -->
-    
-<script>
+  <script>
     (() => {
       document
         .querySelector(".js-speaker-form")
@@ -565,8 +582,10 @@
         });
     })();
   </script>
+  <script src="./js/menu.js"></script>
   </body>
 </html>
+
 
 
 

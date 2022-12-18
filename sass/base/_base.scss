@@ -17,7 +17,25 @@ html{
     margin: 0;
     padding: 0;
   }
+
+  .body {
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    color: var(--main-color);
+    padding-top: 60px;
+
+    @media screen and (max-width:767px){
+    padding-top: 60px;
+
+    }
+    
+  @media screen and (min-width:767px){
+    padding-top: 80px;
   
+  }
+  }
+
   .items {
     list-style: none;
   }
@@ -28,16 +46,25 @@ html{
   }
   
   .container {
-    width: 1230px;
+    // mobile screen 0px & >
+    
     margin: 0 auto;
     padding: 0 15px;
-  }
+
+  // tablet screen 768px & >
+    @media screen and (max-width:767px){
+      max-width: 480px;
+    }
+
+    @media screen and (min-width:768px){
+      width: 768px;  
+    }
   
-  .body {
-    margin: 0;
-    font-family: "Roboto", sans-serif;
-    font-size: 14px;
-    color: var(--main-color);
-    padding-top: 80px;
+    // desctop screen 1200px & >
+    @media screen and (min-width:1200px){
+      width: 1200px;
   }
+}
+  
+  
   

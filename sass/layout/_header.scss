@@ -6,24 +6,49 @@
     left:0;
     right: 0;
     z-index: 2;
-  }
-  
-  .header__container {
+    height: 60px;
+    padding: 10px 15px ; 
+   margin: 0;
+    
+   
+  @media screen and (min-width:768px){
+    height: 80px;
     display: flex;
-    align-items: center;
-  }
+    }
+}
   
-  .header__logo {
-    padding-left: 15px;
-    margin-right: 93px;
+.header-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media screen and (min-width:768px){
+    flex-grow: 1;
+    }
+  }
+ 
+   .header__logo {
+    outline: 1px solid red;
+    
+    @media screen and (min-width:1200px){
+     margin-right: 93px;
+    }  
+       
   }
 
   .logo {
     font-family: "Raleway";
     font-weight: 700;
-    font-size: 26px;
-    line-height: calc(31 / 26);
+    font-size: 24px;
+    line-height: calc(28 / 24);
     letter-spacing: 0.03em;
+
+  
+
+    @media screen and (min-width:1200px){
+      font-size: 26px;
+      line-height: calc(31 / 26);
+    }
   }
   
   .header__accent--blue {
@@ -34,28 +59,62 @@
     color: var(--black-color);
   }
 
-  
+
+
   .header-nav__link {
+    font-weight: 500;
+    font-size: 40px;
+    line-height: calc(47 / 40);
+    letter-spacing: 0.02em;
     display: block;
-    padding: 32px 0;
-  
+    color: var(--main-color);
+    
+    @media screen and (min-width:768px){
+          
+  padding: 32px 0;
+  font-size: 14px;
     font-weight: 500;
     line-height: calc(16 / 14);
     letter-spacing: 0.02em;
-    color: var(--main-color);
+    
    
   &:hover,
   &:focus {
     color: var(--hover-color);
   }
 }
-
-   .header-nav {
-    margin-right: auto;
   }
+
+   .header-nav__list {
+    margin: -32px;
+
+    @media screen and (min-width:768px){ 
+    display: flex;
+    margin: -25px ;
+    }    
+}
+
+.header-nav__item{
+  height: calc((100% - 6 * 32px) / 3);
+    margin: 32px;
+   
+    @media screen and (min-width:768px){ 
+      position: relative;
+      width: calc((100% - 6 * 25px) / 3);
+      margin: 25px;
+      text-align: center;
+      width: 100%;
+    }
+     
+      // &:not(:last-child) {
+    //   margin-right: 50px;
+    // }
+  }
+
   .header__current {
     color: var(--hover-color);
     
+    @media screen and (min-width:768px){   
   &::after {
     content: '';
     position: absolute;
@@ -67,31 +126,30 @@
     left:0;
   }
   }
-
-  .header-nav__item{
-    position: relative;
-
-    &:not(:last-child) {
-      margin-right: 50px;
-    }
-    
-  }
-  .header-nav__list {
-    display: flex;
   }
 
-  
   .header-list {
-    display: flex;
-    align-items: center;
+   
+
+  @media screen and (min-width:768px){
+       
   }
+
+  @media screen and (min-width:1200px){
+    display: flex;  
+  }
+}
 
   .header-list__contact {
 
-    &:not(:last-child){
-    margin-right: 50px;
-  }
+
+@media screen and (min-width:1200px){
+  // width: 100%;
+    // &:not(:last-child){
+    // margin-right: 40px;
+  // }
 }
+  }
 
 .header-list__mail {
   display: flex;
@@ -110,9 +168,18 @@
   color: var(--hover-color);
   fill: var(--hover-color);
 }
+
+@media screen and (min-width:768px){
+  margin-bottom: 10px;
+}
+
+@media screen and (min-width:1200px){
+  margin-bottom: 0;
+}
 }
 
   .header-list__tel {
+    
     display: flex;
     font-weight: 500;
     align-items: center;
@@ -134,3 +201,67 @@
     margin-right: 10px;
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
+
+  .mobile-menu__container {
+    text-align: center;
+    padding: 48px 40px;
+    background-color: var(--white-color);
+    
+  @media screen and (max-width: 767px){
+    
+    display: none;
+    position: absolute;
+    top: 0;
+    left:0;
+    width: 100%;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
+   
+    &.is-open{
+      display: block;
+    }
+  }
+
+  @media screen and (min-width: 768px){
+    background-color: transparent;
+  display: flex;
+  align-items:center;
+  padding: 0;
+    }
+  }
+  
+ 
+  .navigation,
+  .contacts{
+    height: 100%;
+    width:100%;
+  }
+
+  .navigation{
+    text-align: left;   
+    margin-bottom: 306px;
+    outline: 1px solid red;
+
+  @media screen and (min-width: 768px){
+      
+     margin-bottom: 0px;
+     margin-right: 99px; 
+     justify-content:space-around;
+     align-items: center; 
+  }
+
+  @media screen and (min-width: 1200px){
+    // justify-content:flex-start;
+    align-items: center; 
+ }
+  }
+
+  .contacts {
+    outline: 1px solid teal;
+    @media screen and (min-width: 768px){
+     
+  }
+
+    @media screen and (min-width: 1200px){
+      display: flex;    
+  }
+}
